@@ -15,5 +15,9 @@
 
 nav{
     background-color: #372e4980 !important ;
-    height: 100%;
+    height: 80px;
+    justify-content: center;
+}
+.navbar-mobile{
+    height:100% ;
 }
