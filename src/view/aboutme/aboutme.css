@@ -94,7 +94,9 @@
   height: 6rem;
 
 }
-
+.section_2_image{
+  width: 150px;
+}
 @media (min-width: 992px) {
   .section_2_subtitle {
     font-size: 32px;
@@ -197,6 +199,9 @@
   .section_back_image {
     width: 500px !important;
   }
+}
+.section_3{
+  text-align: center;
 }
 @media (min-width: 1300px) {
   .photo_aboutme {

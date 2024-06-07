@@ -1,4 +1,3 @@
-// src/view/contact/contact.jsx
 import { useState, useContext } from "react";
 import { FormControl } from "@mui/material";
 import TextField from "@mui/material/TextField";
@@ -7,8 +6,12 @@ import { IoLogoGithub } from "react-icons/io";
 import "./contact.css";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebaConfi";
-import { AuthContext } from "../../App";  // Importa AuthContext correctamente
-import Loader from "../../componets/loader/loader"; // Importa el Loader
+import { AuthContext } from "../../App";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+
+import Loader from "../../componets/loader/loader"; 
 
 const Contact = () => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -17,11 +20,27 @@ const Contact = () => {
   const [mail, setMail] = useState("");
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false); // Estado de carga
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    type: "success",
+  });
+
+  const handleClick = (message, type) => {
+    setSnackbar({ open: true, message, type });
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   const handlesubmit = async (e) => {
     e.preventDefault();
     if (!isAuthenticated) {
-      alert("No estás autenticado");
+      handleClick("No estás autenticado", "error");
       return;
     }
     setLoading(true); // Inicia la carga
@@ -32,15 +51,14 @@ const Contact = () => {
         mail,
         text,
       });
-      alert("Formulario enviado con éxito");
-
+      handleClick("Formulario enviado correctamente", "success");
       setName("");
       setPhone("");
       setMail("");
       setText("");
     } catch (error) {
       console.error("Error enviando el formulario: ", error);
-      alert("Hubo un error enviando el formulario");
+      handleClick("Hubo un error enviando el formulario", "error");
     } finally {
       setLoading(false); // Detiene la carga
     }
@@ -58,12 +76,12 @@ const Contact = () => {
           <p>Puedes hacerlo por LinkedIn o por WhatsApp</p>
           <div className="socialmedia">
             <button className="button_linkedin">
-              <a className="link" href="https://www.linkedin.com/in/ingridmoralesmu%C3%B1oz/" target="_blank">
+              <a className="link" href="https://www.linkedin.com/in/ingridmoralesmu%C3%B1oz/">
                 <FaLinkedin /> LinkedIn
               </a>
             </button>
             <button className="button_whatsapp">
-              <a className="link" href="https://wa.me/56926120711?text=Hola" target="_blank">
+              <a className="link" href="https://wa.me/YOUR_PHONE_NUMBER">
                 <FaWhatsapp /> WhatsApp
               </a>
             </button>
@@ -74,12 +92,12 @@ const Contact = () => {
           <p>También puedes visitar mi GitHub y Behance</p>
           <div className="socialmedia">
             <button className="button_github">
-              <a className="link" href="https://github.com/ingrid-mo" target="_blank">
+              <a className="link" href="https://github.com/YOUR_GITHUB_USERNAME">
                 <IoLogoGithub /> GitHub
               </a>
             </button>
             <button className="button_behance">
-              <a className="link" href="https://www.behance.net/ingridmorales4" target="_blank">
+              <a className="link" href="https://www.behance.net/YOUR_BEHANCE_USERNAME">
                 <FaBehance /> Behance
               </a>
             </button>
@@ -133,6 +151,21 @@ const Contact = () => {
         </FormControl>
         <button type="submit">Enviar</button>
       </form>
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message={snackbar.message}
+        action={
+          <>
+        
+            <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+              <CloseIcon fontSize="small" />
+            </IconButton>
+          </>
+        }
+      />
     </section>
   );
 };

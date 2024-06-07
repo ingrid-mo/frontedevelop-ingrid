@@ -1,17 +1,19 @@
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
-    background-color: #372e4980 !important;
-}
+
 .nav_icon{
     width: 50px;
     margin-top: 1%;
 }
-.css-18kxqsq{
-    background-color: #372e4980 !important ;
-}
+
+
 .list_nav{
     display: flex;
     align-items: center;
 }
 .css-1uragx{
     background-color: #372e4980 !important ;
+}
+
+nav{
+    background-color: #372e4980 !important ;
+    height: 100%;
 }

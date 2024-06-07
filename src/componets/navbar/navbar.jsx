@@ -4,7 +4,7 @@ import { RiHome7Fill } from "react-icons/ri";
 import { AiOutlineStar } from "react-icons/ai";
 import { LuBrainCog } from "react-icons/lu";
 import { MdContacts } from "react-icons/md";
-import * as React from 'react';
+import { useState } from "react";
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -18,20 +18,27 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
+import CloseIcon from "@mui/icons-material/Close";
 
 const drawerWidth = 240;
 
 function DrawerAppBar() {
-
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleClose = () => {
+    setMobileOpen(false);
+  };
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'  }}>
+    <Box className='navbar-mobile' onClick={handleClose} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
+        <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+          <CloseIcon fontSize="small" sx={{color:'white'}} />
+        </IconButton>
         <img src="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/Group%20179.png?alt=media&token=8eebf155-3512-4edc-a8ec-9c1b0e08d3f4" alt="icono mio" />
       </Typography>
       <Divider />
@@ -68,9 +75,8 @@ function DrawerAppBar() {
     </Box>
   );
 
-
   return (
-    <Box sx={{ display: 'flex', background:' #372e4980 !important' }}>
+    <Box sx={{ display: 'flex', background: ' #372e4980 !important' }}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
@@ -127,7 +133,11 @@ function DrawerAppBar() {
             backdropFilter: 'blur(10px)', // Agregar desenfoque de fondo
             padding: 2, // Espaciado interno para un mejor diseño
           }}
-          onClick={handleDrawerToggle}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              handleClose();
+            }
+          }}
         >
           {drawer}
         </Box>
