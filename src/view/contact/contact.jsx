@@ -88,7 +88,7 @@ const Contact = () => {
             </button>
           </div>
         </div>
-        <hr />
+        <hr  className="line-contact"/>
         <div className="contact_text">
           <p>También puedes visitar mi GitHub y Behance</p>
           <div className="socialmedia">

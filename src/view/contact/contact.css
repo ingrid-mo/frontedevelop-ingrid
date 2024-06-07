@@ -92,7 +92,13 @@ background-color: #4869DF;
     justify-content: center;
 
 }
+.line-contact{
+    width: 250px;
+}
 @media (min-width: 992px){
+    .line-contact{
+        width: 380px;
+    }
     .contact{
         flex-direction: row;
        height: 100%;
