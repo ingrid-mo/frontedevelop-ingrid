@@ -71,6 +71,7 @@ const Contact = () => {
   return (
     <section className="contact">
       <div className="contact_content">
+        <div className="contact_content_container">
         <h1 className="contact_title">Contáctame</h1>
         <div className="contact_text">
           <p>Puedes hacerlo por LinkedIn o por WhatsApp</p>
@@ -103,9 +104,10 @@ const Contact = () => {
             </button>
           </div>
         </div>
+        </div>
       </div>
-
-      <form onSubmit={handlesubmit}>
+<div className="contact_form">
+  <form onSubmit={handlesubmit}>
         <p>
           O puedes rellenar este formulario de contacto y me comunicaré contigo
           a la brevedad
@@ -151,7 +153,8 @@ const Contact = () => {
         </FormControl>
         <button type="submit">Enviar</button>
       </form>
-
+</div>
+      
       <Snackbar
         open={snackbar.open}
         autoHideDuration={6000}
