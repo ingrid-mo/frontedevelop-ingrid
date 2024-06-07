@@ -97,6 +97,11 @@
 .section_2_image{
   width: 150px;
 }
+.dots {
+    
+  color: white;
+margin: 2%;
+}
 @media (min-width: 992px) {
   .section_2_subtitle {
     font-size: 32px;
@@ -164,9 +169,7 @@
 
 
   }
-  .dots {
-    color: #71619b;
-  }
+
 
   .section_back {
     display: block;
