@@ -85,18 +85,18 @@ function DrawerAppBar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'none', md:'block' } }}
           >
             <img className="nav_icon" src="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/Group%20179.png?alt=media&token=8eebf155-3512-4edc-a8ec-9c1b0e08d3f4" alt="icono mio" />
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'none' , md:'block'  } }}>
             <Button sx={{ color: '#fff' }}>
               <NavLink to="/" className="list_nav">
                 <RiHome7Fill /> Inicio
