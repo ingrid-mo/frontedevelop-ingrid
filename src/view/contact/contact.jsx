@@ -77,12 +77,12 @@ const Contact = () => {
           <p>Puedes hacerlo por LinkedIn o por WhatsApp</p>
           <div className="socialmedia">
             <button className="button_linkedin">
-              <a className="link" href="https://www.linkedin.com/in/ingridmoralesmu%C3%B1oz/">
+              <a className="link" href="https://www.linkedin.com/in/ingridmoralesmu%C3%B1oz/" target="_blank">
                 <FaLinkedin /> LinkedIn
               </a>
             </button>
             <button className="button_whatsapp">
-              <a className="link" href="https://wa.me/+56926120711?type=hola">
+              <a className="link" href="https://wa.me/+56926120711?type=hola" target="_blank">
                 <FaWhatsapp /> WhatsApp
               </a>
             </button>
@@ -93,12 +93,12 @@ const Contact = () => {
           <p>También puedes visitar mi GitHub y Behance</p>
           <div className="socialmedia">
             <button className="button_github">
-              <a className="link" href="https://github.com/ingrid-mo">
+              <a className="link" href="https://github.com/ingrid-mo" target="_blank">
                 <IoLogoGithub /> GitHub
               </a>
             </button>
             <button className="button_behance">
-              <a className="link" href="https://www.behance.net/">
+              <a className="link" href="https://www.behance.net/" target="_blank">
                 <FaBehance /> Behance
               </a>
             </button>
@@ -115,15 +115,18 @@ const Contact = () => {
 
         <FormControl sx={{ width: "30ch" }}>
           <TextField
+     required
             id="name"
             label="Nombre"
             variant="standard"
             value={name}
             onChange={(e) => setName(e.target.value)}
+          
           />
         </FormControl>
         <FormControl sx={{ width: "30ch" }}>
           <TextField
+          required
             id="phone"
             label="Teléfono"
             variant="standard"
@@ -133,6 +136,7 @@ const Contact = () => {
         </FormControl>
         <FormControl sx={{ width: "30ch" }}>
           <TextField
+          required
             id="mail"
             label="Email"
             variant="standard"
