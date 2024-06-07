@@ -9,7 +9,7 @@ import Proyect from "./view/proyects/proyect";
 import Contact from "./view/contact/contact";
 import { auth } from "./firebaConfi";
 import Loader from "./componets/loader/loader"; // Importa el componente Loader
-
+import Notfound from "./view/404/notfound";
 export const AuthContext = createContext();
 
 const Layout = ({ children }) => {
@@ -56,6 +56,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<LayoutWrapper />} />
+      
         </Routes>
       </Router>
     </AuthContext.Provider>
@@ -69,6 +70,7 @@ const LayoutWrapper = () => {
         <Route path="/SobreMi" element={<Aboutme />} />
         <Route path="/Proyecto" element={<Proyect />} />
         <Route path="/Contactame" element={<Contact />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </Layout>
   );

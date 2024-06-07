@@ -1,0 +1,20 @@
+
+.notfound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_volver{
+    background-color: transparent;
+    color: #fff;
+    width: 150px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    height: 45px;
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+.button_volver:hover{
+    background-color: #7B63AB;
+}
