@@ -82,7 +82,7 @@ const Contact = () => {
               </a>
             </button>
             <button className="button_whatsapp">
-              <a className="link" href="https://wa.me/YOUR_PHONE_NUMBER">
+              <a className="link" href="https://wa.me/+56926120711?type=hola">
                 <FaWhatsapp /> WhatsApp
               </a>
             </button>
@@ -93,12 +93,12 @@ const Contact = () => {
           <p>También puedes visitar mi GitHub y Behance</p>
           <div className="socialmedia">
             <button className="button_github">
-              <a className="link" href="https://github.com/YOUR_GITHUB_USERNAME">
+              <a className="link" href="https://github.com/ingrid-mo">
                 <IoLogoGithub /> GitHub
               </a>
             </button>
             <button className="button_behance">
-              <a className="link" href="https://www.behance.net/YOUR_BEHANCE_USERNAME">
+              <a className="link" href="https://www.behance.net/">
                 <FaBehance /> Behance
               </a>
             </button>
