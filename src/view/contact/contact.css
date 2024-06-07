@@ -1,9 +1,8 @@
 .contact{
     display: flex;
 flex-direction: column;
-
     background-image: url("https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/3314424.jpg?alt=media&token=825469ba-61bc-4e21-8eb1-4a5f98010a9a");
-    height: 70rem;
+    height: 100rem;
     width: 100%;
     background-size: cover;
     align-items: center;
