@@ -1,0 +1,32 @@
+.loyaut {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+
+}
+.header{
+height: 10vh;
+
+
+  
+ }
+.main{
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  overflow-y: scroll;
+
+
+}
+.MuiAppBar-positionFixed{
+  background-color: transparent;
+}
+@media (min-width: 992px){
+  .main{
+    overflow-y: visible;
+  }
+}
