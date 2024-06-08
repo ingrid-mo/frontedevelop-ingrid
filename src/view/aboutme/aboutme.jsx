@@ -2,7 +2,16 @@ import "./aboutme.css";
 import "animate.css";
 import { GoDotFill } from "react-icons/go";
 import { IoLogoGithub } from "react-icons/io";
+
 const Aboutme = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+  link.href =  '../../../public/utils/curriculum-IngridMorales-2024.pdf';
+    link.download = 'curriculum-ingridmorales-2024'; // Nombre del archivo que se descargará
+    link.click();
+  };
+
+
   return (
     <section className="aboutme">
       <div className="section__1">
@@ -82,8 +91,8 @@ const Aboutme = () => {
       <div className="section_3">
        <p>Te dejo mi cv para que me conoscas mejor o visita mi Github</p>
        <div className="curriculum">
-        <button>
-          <a href="src\view\aboutme\utils\curriculum-IngridMorales-2024.pdf" target="_blank">Currilum vitae</a></button>
+        <button onClick={handleDownload}>
+        Currilum vitae</button>
           <button className="button_github">
               <a className="link" href="https://github.com/ingrid-mo" target="_blank">
                 <IoLogoGithub /> GitHub

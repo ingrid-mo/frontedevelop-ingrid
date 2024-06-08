@@ -60,7 +60,7 @@ const Home = () => {
           />
         </svg>
         <div className="content">
-          <h2>Bienvenidos soy</h2>
+          <h2>Bienvenidos</h2>
           <h1 className='home_title'>Ingrid Morales Muñoz</h1>
           <p>Frontend developer | UX/UI Designer</p>
           <div className='skills'>
