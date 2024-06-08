@@ -6,7 +6,7 @@ import { IoLogoGithub } from "react-icons/io";
 const Aboutme = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-  link.href =  '../../../public/utils/curriculum-IngridMorales-2024.pdf';
+  link.href =  '../../../public/files/curriculum-IngridMorales-2024.pdf';
     link.download = 'curriculum-ingridmorales-2024.pdf'; // Nombre del archivo que se descargará
     link.click();
   };
