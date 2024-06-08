@@ -86,7 +86,7 @@ const Aboutme = () => {
        <p>Te dejo mi cv para que me conozcas mejor o visita mi Github</p>
        <div className="curriculum">
        <button className="button_curriculum">
-         <a href="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/curriculum-IngridMorales-2024.pdf?alt=media&token=adff1c3b-c8ad-4299-9b72-dd07c6bde755" target="_blank">Currilum vitae</a>
+         <a href="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/curriculum-IngridMorales-2024.pdf?alt=media&token=d74d9370-c9fb-4d82-8d94-fcb39df65030" target="_blank">Currilum vitae</a>
        </button>
        <button className="button_linkedin">
               <a className="link" href="https://www.linkedin.com/in/ingridmoralesmu%C3%B1oz/" target="_blank">
