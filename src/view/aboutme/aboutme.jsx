@@ -2,15 +2,9 @@ import "./aboutme.css";
 import "animate.css";
 import { GoDotFill } from "react-icons/go";
 import { IoLogoGithub } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 const Aboutme = () => {
-//   const handleDownload = () => {
-//     const link = document.createElement('a');
-//   link.href =  '../../../public/files/curriculum-IngridMorales-2024.pdf';
-//     link.download = 'curriculum-ingridmorales-2024.pdf'; // Nombre del archivo que se descargará
-//     link.click();
-//   };
-
 
   return (
     <section className="aboutme">
@@ -91,8 +85,15 @@ const Aboutme = () => {
       <div className="section_3">
        <p>Te dejo mi cv para que me conoscas mejor o visita mi Github</p>
        <div className="curriculum">
-        <button> <a href="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/curriculum-IngridMorales-2024.pdf?alt=media&token=adff1c3b-c8ad-4299-9b72-dd07c6bde755" target="_blank">Currilum vitae</a>
-        </button>
+       <button className="button_curriculum">
+         <a href="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/curriculum-IngridMorales-2024.pdf?alt=media&token=adff1c3b-c8ad-4299-9b72-dd07c6bde755" target="_blank">Currilum vitae</a>
+       </button>
+       <button className="button_linkedin">
+              <a className="link" href="https://www.linkedin.com/in/ingridmoralesmu%C3%B1oz/" target="_blank">
+                <FaLinkedin /> LinkedIn
+              </a>
+            </button>
+       
           <button className="button_github">
               <a className="link" href="https://github.com/ingrid-mo" target="_blank">
                 <IoLogoGithub /> GitHub
