@@ -10,6 +10,8 @@ import Contact from "./view/contact/contact";
 import { auth } from "./firebaConfi";
 import Loader from "./componets/loader/loader"; // Importa el componente Loader
 import Notfound from "./view/404/notfound";
+
+
 export const AuthContext = createContext();
 
 const Layout = ({ children }) => {
