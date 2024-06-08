@@ -46,6 +46,8 @@ button {
   border: 1px solid #fff;
   border-radius: 100px;
   height: 45px;
+  margin: 2%;
+
 }
 @media (min-width: 992px) {
   h2 {
