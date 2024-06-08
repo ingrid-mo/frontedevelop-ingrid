@@ -4,12 +4,12 @@ import { GoDotFill } from "react-icons/go";
 import { IoLogoGithub } from "react-icons/io";
 
 const Aboutme = () => {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-  link.href =  '../../../public/files/curriculum-IngridMorales-2024.pdf';
-    link.download = 'curriculum-ingridmorales-2024.pdf'; // Nombre del archivo que se descargará
-    link.click();
-  };
+//   const handleDownload = () => {
+//     const link = document.createElement('a');
+//   link.href =  '../../../public/files/curriculum-IngridMorales-2024.pdf';
+//     link.download = 'curriculum-ingridmorales-2024.pdf'; // Nombre del archivo que se descargará
+//     link.click();
+//   };
 
 
   return (
@@ -91,8 +91,8 @@ const Aboutme = () => {
       <div className="section_3">
        <p>Te dejo mi cv para que me conoscas mejor o visita mi Github</p>
        <div className="curriculum">
-        <button onClick={handleDownload}>
-        Currilum vitae</button>
+        <button> <a href="https://firebasestorage.googleapis.com/v0/b/portafolio-7e72a.appspot.com/o/curriculum-IngridMorales-2024.pdf?alt=media&token=adff1c3b-c8ad-4299-9b72-dd07c6bde755" target="_blank">Currilum vitae</a>
+        </button>
           <button className="button_github">
               <a className="link" href="https://github.com/ingrid-mo" target="_blank">
                 <IoLogoGithub /> GitHub
