@@ -102,6 +102,10 @@
   color: white;
 margin: 2%;
 }
+.button_curriculum:hover{
+  background-color: #5b419c;
+  border: none;
+}
 @media (min-width: 992px) {
   .section_2_subtitle {
     font-size: 32px;
