@@ -8,6 +8,7 @@
 .list_nav{
     display: flex;
     align-items: center;
+    gap: 5%;
 }
 .css-1uragx{
     background-color: #372e4980 !important ;
